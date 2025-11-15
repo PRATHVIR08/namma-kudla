@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namma Kudla - Travel Guides</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #b6ff00;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #b6ff00;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #b6ff00;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 60%;
+      border: 2px solid #b6ff00;
+      background: #000;
+      color: #b6ff00;
+      border-radius: 5px;
+    }
+
+    .guide-card {
+      background-color: #111;
+      border: 1px solid #b6ff00;
+      border-radius: 10px;
+      margin: 20px auto;
+      width: 80%;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .guide-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px #b6ff00;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #b6ff00;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+      background-color: #000;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .contact-info strong {
+      color: #b6ff00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meet Our Travel Guides - Namma Kudla</h1>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search guides..." onkeyup="searchGuides()">
+  </div>
+
+  <div id="guideList">
+    <!-- 1 -->
+    <div class="guide-card">
+      <h2>Rohan Shetty – Panambur Beach Guide</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> rohan.shetty@namma.com</p>
+        <p><strong>Contact:</strong> +91 98765 12345</p>
+        <p><strong>Address:</strong> Beach Road, Panambur, Mangalore – 575010</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="guide-card">
+      <h2>Deepika D’Souza – Kudroli Gokarnath Temple Guide</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> deepika.dsouza@namma.com</p>
+        <p><strong>Contact:</strong> +91 99012 45678</p>
+        <p><strong>Address:</strong> Kudroli Main Road, Mangalore – 575003</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="guide-card">
+      <h2>Joseph Pinto – St. Aloysius Chapel Guide</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> joseph.pinto@namma.com</p>
+        <p><strong>Contact:</strong> +91 99802 23456</p>
+        <p><strong>Address:</strong> Lighthouse Hill, Mangalore – 575001</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="guide-card">
+      <h2>Shreya Rai – Kadri Manjunatha Temple Guide</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> shreya.rai@namma.com</p>
+        <p><strong>Contact:</strong> +91 98709 78901</p>
+        <p><strong>Address:</strong> Kadri Hills, Mangalore – 575002</p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="guide-card">
+      <h2>Vivek Kamath – Tannirbhavi Beach Guide</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> vivek.kamath@namma.com</p>
+        <p><strong>Contact:</strong> +91 98110 56743</p>
+        <p><strong>Address:</strong> Tannirbhavi, Mangalore – 575013</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="guide-card">
+      <h2>Ananya Pai – Pilikula Nisargadhama Guide</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> ananya.pai@namma.com</p>
+        <p><strong>Contact:</strong> +91 90080 33221</p>
+        <p><strong>Address:</strong> Pilikula Road, Vamanjoor, Mangalore – 575028</p>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="guide-card">
+      <h2>Faizal Ahmed – Sultan Battery Guide</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> faizal.ahmed@namma.com</p>
+        <p><strong>Contact:</strong> +91 98212 88109</p>
+        <p><strong>Address:</strong> Boloor, Sultan Battery, Mangalore – 575003</p>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="guide-card">
+      <h2>Lakshmi Prasad – Mangaladevi Temple Guide</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> lakshmi.prasad@namma.com</p>
+        <p><strong>Contact:</strong> +91 96112 77100</p>
+        <p><strong>Address:</strong> Mangaladevi Road, Bolar, Mangalore – 575001</p>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="guide-card">
+      <h2>Harsha Nayak – Ullal Beach Guide</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> harsha.nayak@namma.com</p>
+        <p><strong>Contact:</strong> +91 99331 67820</p>
+        <p><strong>Address:</strong> Ullal, Someshwara Road, Mangalore – 575020</p>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="guide-card">
+      <h2>Meera Fernandes – Someshwara Beach Guide</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> meera.fernandes@namma.com</p>
+        <p><strong>Contact:</strong> +91 99884 55670</p>
+        <p><strong>Address:</strong> Someshwara Beach Road, Ullal, Mangalore – 575023</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function searchGuides() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const guides = document.getElementsByClassName("guide-card");
+
+      for (let i = 0; i < guides.length; i++) {
+        const title = guides[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+        if (title.includes(input)) {
+          guides[i].style.display = "";
+        } else {
+          guides[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

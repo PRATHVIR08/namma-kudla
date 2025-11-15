@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Namma Kudla</title>
+<style>
+  body { background-color: #000; color: #b6ff00; font-family: "Poppins", sans-serif; margin: 0;}
+  header, footer { background-color: #111; text-align: center; padding: 15px;}
+  nav a { color: #b6ff00; margin: 0 10px; text-decoration: none;}
+  form { width: 300px; margin: 50px auto; text-align: center; background: #111; padding: 20px; border-radius: 8px;}
+  input, textarea { width: 90%; margin: 8px 0; padding: 8px; background: #000; border: 1px solid #b6ff00; color: #b6ff00;}
+  button { background-color: #b6ff00; color: black; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer;}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Contact Us</h1>
+  <nav>
+    <a href="tourhome.html">Home</a>
+      <a href="blogtour.html">Blog</a>
+      <a href="destinationtour.html">Destinations</a>
+      <a href="guideprofilepage.html">Guides</a>
+      <a href="contacttour.html">Contact</a>
+  </nav>
+</header>
+
+<form onsubmit="showMessage(event)">
+  <h2>Get in Touch 💬</h2>
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <textarea id="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+  <p id="response"></p>
+</form>
+
+<footer>© 2025 Namma Kudla | Let’s Connect 🌍</footer>
+
+<script>
+  function showMessage(e) {
+    e.preventDefault();
+    document.getElementById("response").textContent = "Thank you! We'll get back soon.";
+  }
+</script>
+</body>
+</html>

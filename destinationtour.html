@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations - Namma Kudla</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #b6ff00;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #b6ff00;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #b6ff00;
+      font-size: 2em;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 60%;
+      border: 2px solid #b6ff00;
+      background: #000;
+      color: #b6ff00;
+    }
+
+    .destination {
+      border: 1px solid #b6ff00;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #111;
+      transition: transform 0.3s;
+    }
+
+    .destination:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px #b6ff00;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #b6ff00;
+      text-decoration: underline;
+    }
+
+    .reviews {
+      margin-top: 20px;
+      border-top: 1px solid #b6ff00;
+      padding-top: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      background: #000;
+      color: #b6ff00;
+      border: 1px solid #b6ff00;
+    }
+
+    button {
+      background-color: #b6ff00;
+      color: #000;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #9df005;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Destinations in Namma Kudla</h1>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search destinations..." onkeyup="searchDestinations()">
+  </div>
+
+  <div id="destinationList">
+
+    <!-- 1. Panambur Beach -->
+    <div class="destination">
+      <h2>Panambur Beach</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Panambur_Beach%2C_Mangalore.jpg" alt="Panambur Beach">
+      <p>
+        Panambur Beach, one of Mangalore’s most famous coastal attractions, is known for its pristine sands, gentle waves, and breathtaking sunsets. It’s a popular hangout for families, tourists, and thrill-seekers. The beach is exceptionally clean and well-maintained, making it one of India’s safest and most organized beaches.  
+        <br><br>
+        Every year, the Panambur Beach hosts the spectacular *International Kite Festival*, attracting enthusiasts from all over the world. The sight of colorful kites soaring against the Arabian Sea backdrop is truly mesmerizing. Apart from leisure, the beach also offers water sports like jet-skiing, banana boat rides, camel rides, and ATV drives.  
+        <br><br>
+        During evenings, food stalls line up offering spicy Mangalorean snacks and seafood delicacies. The atmosphere buzzes with energy as locals enjoy the cool sea breeze and children play on the shore. The lifeguards ensure a safe experience for all visitors.  
+        <br><br>
+        For those seeking tranquility, early mornings at Panambur are equally charming, with fishermen heading out to sea and the golden sunrise painting the horizon. The beach is located just 10 km from the city center and is easily accessible via road. Whether it’s a peaceful walk or an adventurous outing, Panambur Beach truly captures the essence of Kudla.
+      </p>
+      <a href="https://maps.app.goo.gl/VffxX3JcN7EUmDhd9" target="_blank" class="map-link">📍 View on Google Maps</a>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <div class="review-list" id="reviews-panambur"></div>
+        <textarea id="reviewInput-panambur" placeholder="Write a review..."></textarea>
+        <button onclick="addReview('panambur')">Submit Review</button>
+      </div>
+    </div>
+
+    <!-- 2. Kudroli Gokarnath Temple -->
+    <div class="destination">
+      <h2>Kudroli Gokarnath Temple</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Gokarnanatheshwara_Temple%2C_Kudroli.jpg" alt="Kudroli Gokarnath Temple">
+      <p>
+        The Kudroli Gokarnath Temple, dedicated to Lord Shiva, is one of Mangalore’s most magnificent spiritual landmarks. Built in 1912 and consecrated by Sri Narayana Guru, it stands as a symbol of equality and devotion. The temple complex features towering gopurams adorned with intricate carvings and colorful deities, reflecting the beauty of South Indian architecture.  
+        <br><br>
+        The temple becomes a glowing spectacle during *Dasara*, with thousands of decorative lights illuminating its entire structure. Devotees and tourists flock here to witness processions, cultural programs, and divine rituals. The temple also holds smaller shrines dedicated to Ganesha, Subramanya, and Annapoorneshwari.  
+        <br><br>
+        Kudroli Temple’s calm and sacred atmosphere offers solace to visitors seeking spiritual rejuvenation. The temple is open to all communities, staying true to the teachings of Narayana Guru who preached equality beyond caste and creed. Surrounded by beautiful gardens and fountains, it’s not just a place of worship but also a cultural gem of Mangalore.
+      </p>
+      <a href="https://maps.app.goo.gl/xCJb4Qehz2qscq8D6" target="_blank" class="map-link">📍 View on Google Maps</a>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <div class="review-list" id="reviews-kudroli"></div>
+        <textarea id="reviewInput-kudroli" placeholder="Write a review..."></textarea>
+        <button onclick="addReview('kudroli')">Submit Review</button>
+      </div>
+    </div>
+
+    <!-- 3. St. Aloysius Chapel -->
+    <div class="destination">
+      <h2>St. Aloysius Chapel</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/St._Aloysius_Chapel_Mangalore.jpg" alt="St. Aloysius Chapel">
+      <p>
+        Built in 1880 by Jesuit missionaries, *St. Aloysius Chapel* stands as one of Mangalore’s most treasured historical landmarks. Perched atop the Lighthouse Hill, it offers a panoramic view of the Arabian Sea. What makes this chapel extraordinary is its breathtaking interior — every inch of its walls and ceilings is covered in frescoes and paintings by the Italian artist *Antonio Moscheni*.  
+        <br><br>
+        The paintings depict the life of St. Aloysius Gonzaga, scenes from the Bible, and various Christian virtues. The art style is often compared to the Sistine Chapel in Rome, making it a must-visit for art enthusiasts. The vibrant colors, delicate brushwork, and storytelling create an awe-inspiring experience.  
+        <br><br>
+        The chapel’s serene ambiance invites peace and reflection. Visitors are asked to maintain silence and respect the sanctity of the space. Photography inside is restricted to preserve the artwork. Managed by St. Aloysius College, this monument is not just a religious site but a testament to Mangalore’s colonial and cultural heritage.
+      </p>
+      <a href="https://maps.app.goo.gl/fFM8xvjz8p6UXYsx8" target="_blank" class="map-link">📍 View on Google Maps</a>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <div class="review-list" id="reviews-aloysius"></div>
+        <textarea id="reviewInput-aloysius" placeholder="Write a review..."></textarea>
+        <button onclick="addReview('aloysius')">Submit Review</button>
+      </div>
+    </div>
+
+    <!-- 4. Kadri Manjunatha Temple -->
+    <div class="destination">
+      <h2>Kadri Manjunatha Temple</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Kadri_Manjunatha_Temple%2C_Mangalore.jpg" alt="Kadri Temple">
+      <p>
+        The *Kadri Manjunatha Temple* is one of Mangalore’s oldest and most revered temples, dating back to the 10th century. It is dedicated to Lord Manjunatheshwara, a form of Lord Shiva. The temple is located at the foot of Kadri Hills and surrounded by lush greenery, creating an aura of tranquility.  
+        <br><br>
+        The temple’s architecture blends Hindu and Buddhist influences, featuring bronze statues, stone carvings, and sacred ponds. One of its most significant aspects is the *natural spring*, believed to have healing powers. The bronze idol of Lord Manjunatha is among the oldest of its kind in South India.  
+        <br><br>
+        The annual *Kadri Kambala (buffalo race)* and *Car Festival* attract devotees and tourists alike. The temple’s hilltop offers scenic views of Mangalore city and is perfect for morning treks. Its spiritual atmosphere, combined with history and nature, makes Kadri Temple a must-visit destination for those exploring Kudla.
+      </p>
+      <a href="https://maps.app.goo.gl/yHHZ3C9ZnpxxYzgu7" target="_blank" class="map-link">📍 View on Google Maps</a>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <div class="review-list" id="reviews-kadri"></div>
+        <textarea id="reviewInput-kadri" placeholder="Write a review..."></textarea>
+        <button onclick="addReview('kadri')">Submit Review</button>
+      </div>
+    </div>
+
+    <!-- 5–10 Continue next message due to length -->
+     <!-- 5. Tannirbhavi Beach -->
+    <div class="destination">
+      <h2>Tannirbhavi Beach</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Tannirbhavi_beach.jpg" alt="Tannirbhavi Beach">
+      <p>
+        Tannirbhavi Beach is the quieter, more serene sibling of Mangalore’s busier shores — a place where the rhythm of the waves meets a calm, unhurried atmosphere. Located on the western bank of the Gurupura River’s estuary, Tannirbhavi provides a beautiful contrast to the bustling Panambur: wide stretches of sand, rustling casuarina trees, and long horizons that invite slow walks and reflective moments. The beach’s unspoiled vibe makes it ideal for couples, solo travelers seeking solitude, and families who prefer a relaxed day outdoors.
+      </p>
+      <p>
+        One of the charms of Tannirbhavi is the ferry ride from Sultan Battery: the short crossing over calm waters offers delightful vantage points of the river and shoreline and builds anticipation for the quieter environment awaiting you. As you step ashore, expect to find fishermen’s boats, little food stalls, and locals who come here for evening strolls and to watch spectacular sunsets. The beach is also a good spot for birdwatching; migratory and coastal birds frequent the estuarine habitats, especially in the early morning.
+      </p>
+      <p>
+        Conservation and cleanliness have become priorities here — local authorities frequently organize clean-up drives and signage encourages visitors to keep the beach pristine. Although water activities are fewer at Tannirbhavi compared to more commercial beaches, its relaxed ambiance is the main attraction. Pack a picnic, set up under the shade of trees, and watch the amber sky as the sun melts into the Arabian Sea. Tannirbhavi is a reminder that sometimes the most memorable coastal experiences come from simplicity: soft sand, gentle waves, and the quiet company of the sea.
+      </p>
+      <a href="https://maps.app.goo.gl/4u3t9kzX1y2A8kQa8" target="_blank" class="map-link">📍 View on Google Maps</a>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <div class="review-list" id="reviews-tannirbhavi"></div>
+        <textarea id="reviewInput-tannirbhavi" placeholder="Write a review..."></textarea>
+        <button onclick="addReview('tannirbhavi')">Submit Review</button>
+      </div>
+    </div>
+
+    <!-- 6. Pilikula Nisargadhama -->
+    <div class="destination">
+      <h2>Pilikula Nisargadhama</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pilikula_lake.jpg" alt="Pilikula Nisargadhama">
+      <p>
+        Pilikula Nisargadhama is an integrated nature park and cultural complex that has evolved into one of the region’s most beloved family attractions. Spread over a large area on the outskirts of Mangalore, Pilikula blends ecology, recreation, and education into a single destination: a zoo that prioritizes conservation, a botanical garden showcasing native flora, a serene boating lake, and a science center that engages curious minds of all ages. This multi-dimensional park offers a full day of activities, making it perfect for families, school groups, and visitors who enjoy nature and learning.
+      </p>
+      <p>
+        The Pilikula Biological Park is committed to wildlife welfare and houses a variety of native animals in environments designed to mimic natural habitats. Walking trails weave through the park, offering glimpses of birds, butterflies, and small mammals. The botanical gardens are a delight for plant lovers: labeled collections, themed sections, and guided walks introduce native and exotic species while emphasizing conservation. One of the park’s highlights is the lake, where pedal boats glide over placid water surrounded by greenery — an especially peaceful experience at sunrise or sunset.
+      </p>
+      <p>
+        Education is core to Pilikula’s mission. The science center features interactive exhibits, planetarium shows, and outreach programs designed to spark curiosity in children and adults alike. Seasonal festivals and cultural events bring local traditions to life, celebrating folklore, cuisine, and community. For travelers who appreciate a balance of recreation and reflection, Pilikula Nisargadhama is more than a park — it’s an invitation to slow down, learn, and reconnect with the natural world.
+      </p>
+      <a href="https://maps.app.goo.gl/2C5F4e1x7hVQfM7S8" target="_blank" class="map-link">📍 View on Google Maps</a>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <div class="review-list" id="reviews-pilikula"></div>
+        <textarea id="reviewInput-pilikula" placeholder="Write a review..."></textarea>
+        <button onclick="addReview('pilikula')">Submit Review</button>
+      </div>
+    </div>
+
+    <!-- 7. Sultan Battery -->
+    <div class="destination">
+      <h2>Sultan Battery</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Sultan_Battery_mangalore.jpg" alt="Sultan Battery">
+      <p>
+        Sultan Battery is a historic seaside watchtower built by Tipu Sultan in the late 18th century that served as a strategic vantage point to monitor naval movement along the Gurupura River and Arabian Sea. Today the site is a compact but evocative historical precinct where visitors can trace the maritime legacy of the region and enjoy panoramic views of the river meeting the sea. The sturdy stone structure, remnants of ramparts, and the surrounding waterfront create a setting that evokes the military and trading histories of old Kudla.
+      </p>
+      <p>
+        A short ferry ride or a leisurely walk along the riverfront connects you to the Battery area, and the nearby promenade is a popular spot for locals who come to watch boats, fishers, and river life. Photographers favor the site at dawn when mist over the water and soft light combine to produce cinematic scenes. Sultan Battery is also a convenient starting point for short boat trips that offer a different perspective on Mangalore’s coastal ecosystem.
+      </p>
+      <p>
+        While compact, the Battery rewards quiet exploration: consider reading about Tipu Sultan and the maritime trade routes to appreciate the location fully. The surrounding neighborhood includes small cafes and vendors where you can sample local flavors and chat with fisherfolk who continue traditions passed down through generations. Sultan Battery is a small monument with a large story — an essential stop for history lovers and curious travelers who enjoy places where the present still carries the echoes of the past.
+      </p>
+      <a href="https://maps.app.goo.gl/3m8L7nB7cPq6gCqZ8" target="_blank" class="map-link">📍 View on Google Maps</a>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <div class="review-list" id="reviews-sultan"></div>
+        <textarea id="reviewInput-sultan" placeholder="Write a review..."></textarea>
+        <button onclick="addReview('sultan')">Submit Review</button>
+      </div>
+    </div>
+
+    <!-- 8. Mangaladevi Temple -->
+    <div class="destination">
+      <h2>Mangaladevi Temple</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Mangaladevi_Temple_Mangalore.jpg" alt="Mangaladevi Temple">
+      <p>
+        Mangaladevi Temple is the ancient shrine from which the city of Mangalore gets its name. Dedicated to Goddess Mangaladevi, the temple is woven into local identity and is especially significant during festivals such as Navaratri. The temple complex, with its classic South Indian temple architecture, carved pillars, and sculpted deities, offers devotees and visitors a deep sense of continuity with the town’s spiritual roots.
+      </p>
+      <p>
+        Heritage and ritual are central to the temple experience: devotees come for traditional pujas, special offerings, and to attend annual festivities where music, dance, and temple customs take center stage. The labyrinth of small streets around the temple is lined with shops selling traditional items, flower garlands, and prasadam — making a visit both a spiritual and cultural immersion. The temple’s management preserves rituals that have been practiced for generations, and local priests maintain sacred schedules that visitors may observe.
+      </p>
+      <p>
+        For travelers, a visit to Mangaladevi is an opportunity to observe living traditions in an urban context. The temple’s atmosphere is reverent and welcoming; respectful visitors will be rewarded with an authentic glimpse of Kudla’s devotional life. Whether you are drawn by architecture, history, or faith, Mangaladevi Temple remains a cornerstone of the city’s cultural map.
+      </p>
+      <a href="https://maps.app.goo.gl/8Qb2zL5yP7dH9cX2A" target="_blank" class="map-link">📍 View on Google Maps</a>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <div class="review-list" id="reviews-mangaladevi"></div>
+        <textarea id="reviewInput-mangaladevi" placeholder="Write a review..."></textarea>
+        <button onclick="addReview('mangaladevi')">Submit Review</button>
+      </div>
+    </div>
+
+    <!-- 9. Ullal Beach -->
+    <div class="destination">
+      <h2>Ullal Beach</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Ullal_beach_mangalore.jpg" alt="Ullal Beach">
+      <p>
+        Ullal Beach sits within a lively fishing village and offers the charm of coastal life combined with scenic beauty. Less commercialized than some of Kudla’s larger beaches, Ullal provides a more authentic experience: you’ll see traditional fishing boats being readied at dawn, families mending nets, and a coastline that feels lived-in and genuine. The nearby Ullal town has a maritime history and cultural connections that make a visit here both picturesque and culturally informative.
+      </p>
+      <p>
+        The shoreline is punctuated by rocky outcrops and stretches of sand suitable for relaxed walks and watching the fishermen’s daily routines. Seafood lovers will enjoy the chance to sample freshly caught fish prepared in local styles. Ullal’s charm lies in its everyday rhythms — small temples, local markets, and friendly vendors provide an immersive experience for travelers who wish to observe rather than just visit.
+      </p>
+      <p>
+        For photographers, Ullal Beach provides compelling village-and-sea tableaux, especially at dawn when soft light reveals the textures of boats and sand. The beach is also conveniently close to other attractions like Someshwara and Tannirbhavi, making it a good addition to a coastal itinerary that balances activity with relaxation.
+      </p>
+      <a href="https://maps.app.goo.gl/9a2u5kT3v7mQ2bYc8" target="_blank" class="map-link">📍 View on Google Maps</a>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <div class="review-list" id="reviews-ullal"></div>
+        <textarea id="reviewInput-ullal" placeholder="Write a review..."></textarea>
+        <button onclick="addReview('ullal')">Submit Review</button>
+      </div>
+    </div>
+
+    <!-- 10. Someshwara Beach -->
+    <div class="destination">
+      <h2>Someshwara Beach</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Someshwara_Beach.jpg" alt="Someshwara Beach">
+      <p>
+        Someshwara Beach is known for its distinctive and dramatic rock formations called Rudra Shile — massive boulders scattered along the shoreline that create striking seascapes and natural viewing platforms. Located near the ancient Someshwara Temple, this beach combines geological interest with cultural depth, offering visitors an experience that is both scenic and soulful. The temple’s presence adds a layer of ritual significance to the locale and gives the beach its name.
+      </p>
+      <p>
+        Unlike more commercial beaches, Someshwara draws those who appreciate raw coastal beauty. The jagged rocks, tidal pools, and shifting sands make it ideal for exploration, photography, and quiet contemplation. Caution is advised for swimmers because the currents can be strong; instead, visitors enjoy walking along the shore, perched on rocks, or watching fishermen haul in their catches. The contrast between the stone formations and the endless sea produces spectacular vistas at sunrise and sunset.
+      </p>
+      <p>
+        Nearby food stalls and small eateries provide local snacks and refreshments, but the main attraction remains nature itself: the sound of waves, the sculptural rocks, and the temple bells drifting from the nearby shrine. Someshwara is a place to pause, take photographs, and absorb the coastal temperament of Kudla — a destination that rewards curiosity and respect for the sea.
+      </p>
+      <a href="https://maps.app.goo.gl/5z8P7yY2bQ4nZrT28" target="_blank" class="map-link">📍 View on Google Maps</a>
+      <div class="reviews">
+        <h3>Reviews:</h3>
+        <div class="review-list" id="reviews-someshwara"></div>
+        <textarea id="reviewInput-someshwara" placeholder="Write a review..."></textarea>
+        <button onclick="addReview('someshwara')">Submit Review</button>
+      </div>
+    </div>
+
+  </div> <!-- end destinationList -->
+
+  <footer style="background:#111;color:#b6ff00;text-align:center;padding:20px;margin-top:20px;">
+    © 2025 Namma Kudla | Explore, Respect & Enjoy
+  </footer>
+
+  <script>
+    // Search function - filters destinations by title
+    function searchDestinations() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const destinations = document.querySelectorAll('.destination');
+      destinations.forEach(dest => {
+        const title = dest.querySelector('h2').textContent.toLowerCase();
+        dest.style.display = title.includes(input) ? 'block' : 'none';
+      });
+    }
+
+    // Review function - adds review text below each destination
+    function addReview(place) {
+      const textarea = document.getElementById(`reviewInput-${place}`);
+      if (!textarea) return;
+      const text = textarea.value.trim();
+      if (text === '') {
+        alert('Please write a review before submitting.');
+        return;
+      }
+      const list = document.getElementById(`reviews-${place}`);
+      const p = document.createElement('p');
+
+      // Star heuristic
+      let star = '⭐';
+      const lower = text.toLowerCase();
+      if (lower.includes('excellent') || lower.includes('amazing') || lower.includes('best')) star = '⭐⭐⭐⭐⭐';
+      else if (lower.includes('good') || lower.includes('nice')) star = '⭐⭐⭐⭐';
+      else if (lower.includes('ok') || lower.includes('average')) star = '⭐⭐⭐';
+
+      p.textContent = `${star} ${text}`;
+      list.appendChild(p);
+      textarea.value = '';
+    }
+
+    // Preload sample reviews - fixed syntax
+    (function preloadSampleReviews() {
+      const samples = {
+        'panambur': ['Loved the sunset and water sports!', 'Clean beach, great for families.'],
+        'kudroli': ['The temple during Dasara is a sight to behold.', 'Peaceful atmosphere and beautiful architecture.'],
+        'aloysius': ['The artwork is breathtaking — like a tiny Sistine Chapel!', 'A must-visit for art lovers.'],
+        'kadri': ['So much history and a beautiful setting on the hill.'],
+        'tannirbhavi': ['Perfect for a quiet evening walk.'],
+        'pilikula': ['Kids loved the science center and boating.', 'Great day out for families.'],
+        'sultan': ['Small but historic — great photos at sunrise.'],
+        'mangaladevi': ['Felt the city’s spiritual roots here.'],
+        'ullal': ['Authentic fishing village experience and fresh seafood.'],
+        'someshwara': ['Rugged rocks make it a photographer’s dream.']
+      };
+      for (const place in samples) {
+        const list = document.getElementById(`reviews-${place}`);
+        if (!list) continue;
+        samples[place].forEach(txt => {
+          const p = document.createElement('p');
+          p.textContent = `⭐ ${txt}`;
+          list.appendChild(p);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+    
+    

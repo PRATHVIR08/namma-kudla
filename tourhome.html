@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namma Kudla - Explore Mangalore</title>
+<style>
+  body {
+    margin: 0;
+    background-color: #000;
+    color: #b6ff00;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+
+  header {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #b6ff00;
+  }
+
+  header h1 {
+    margin: 0;
+    color: #b6ff00;
+    font-size: 2em;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    color: #b6ff00;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #b6ff00;
+  }
+
+  .banner {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .section {
+    padding: 50px 10%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s ease-out;
+  }
+
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h2 {
+    color: #b6ff00;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #b6ff00;
+  }
+
+  p {
+    line-height: 1.7;
+    font-size: 1.05em;
+    text-align: justify;
+  }
+
+  .hotels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .hotel-card {
+    background-color: #111;
+    border: 1px solid #b6ff00;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .hotel-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #b6ff00;
+  }
+
+  .hotel-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #b6ff00;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Namma Kudla</h1>
+  <nav>
+    <a href="tourhome.html">Home</a>
+      <a href="blogtour.html">Blog</a>
+      <a href="destinationtour.html">Destinations</a>
+      <a href="guideprofilepage.html">Guides</a>
+      <a href="contacttour.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Animated Banner -->
+<div class="banner">
+  <img src="https://in.images.search.yahoo.com/images/view;_ylt=AwrKF0ojsxBp7YcKxCe9HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkA2U0YWU3YmY3M2QyYjc2YzdiYTRmNjI2MjRiYzYwNTRhBGdwb3MDNwRpdANiaW5n?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dpanambur%2Bbeach%26type%3DE210IN885G0%26fr%3Dmcafee%26fr2%3Dpiv-web%26tab%3Dorganic%26ri%3D7&w=550&h=367&imgurl=media-cdn.tripadvisor.com%2Fmedia%2Fphoto-s%2F11%2Fa6%2Fe0%2F66%2Fpanambur-beach.jpg&rurl=https%3A%2F%2Fwww.tripadvisor.in%2FAttraction_Review-g297630-d3265821-Reviews-Panambur_Beach-Mangalore_Dakshina_Kannada_District_Karnataka.html&size=31KB&p=panambur+beach&oid=e4ae7bf73d2b76c7ba4f62624bc6054a&fr2=piv-web&fr=mcafee&tt=Panambur+Beach+%28Mangalore%29+-+2021+What+to+Know+Before+You+Go+%28with+...&b=0&ni=21&no=7&ts=&tab=organic&sigr=P3J8AnSmPEU.&sigb=uGdW3alPqpCQ&sigi=BNo0kX3nZHH5&sigt=GBB_36K0m_Rs&.crumb=0Y32Y2hyNRV&fr=mcafee&fr2=piv-web&type=E210IN885G0 "class="slide" style="opacity:1;">
+  <img src="https://in.images.search.yahoo.com/images/view;_ylt=Awr1QjiisxBpAeQICBq9HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkA2VjMjc2MWQxYTRhZTk2OWE2ZWNiZGUyNGJkMjdhMWM5BGdwb3MDMwRpdANiaW5n?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dgokarnatheshwara%2Btemple%26ei%3DUTF-8%26type%3DE210IN885G0%26fr%3Dmcafee%26fr2%3Dsa-gp-search%26tab%3Dorganic%26ri%3D3&w=800&h=600&imgurl=i.pinimg.com%2Foriginals%2F43%2F6c%2F1e%2F436c1ef8f169806f00301c84a23676d8.jpg&rurl=https%3A%2F%2Fin.pinterest.com%2Fpin%2F372602569152030417%2F&size=111KB&p=gokarnatheshwara+temple&oid=ec2761d1a4ae969a6ecbde24bd27a1c9&fr2=sa-gp-search&fr=mcafee&tt=Gokarnatheshwara+Temple%2C+Kudroli%2C+Mangalore+-+INDIA+%7C+Moschee%2C+Kirchen+...&b=0&ni=160&no=3&ts=&tab=organic&sigr=ARCAiWIIrQID&sigb=UH0SMxdoK90V&sigi=0EPfbLe_9T7V&sigt=0dgGb2vLkiE0&.crumb=0Y32Y2hyNRV&fr=mcafee&fr2=sa-gp-search&type=E210IN885G0" class="slide">
+  <img src="https://in.images.search.yahoo.com/images/view;_ylt=Awr1QjjqsxBplroIUnW9HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzEwY2E0NDBhMGVhOGYxYjViMGI2ZmU3Yjk0OTQ3N2I1BGdwb3MDNARpdANiaW5n?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dmanjunatheshwara%2Btemple%26ei%3DUTF-8%26type%3DE210IN885G0%26fr%3Dmcafee%26fr2%3Dp%253As%252Cv%253Ai%252Cm%253Asb-top%26tab%3Dorganic%26ri%3D4&w=800&h=600&imgurl=arippadymuttlodge.com%2Fwp-content%2Fuploads%2F2019%2F06%2Fdharmasthala-temple.jpg&rurl=https%3A%2F%2Farippadymuttlodge.com%2Fshri-dharmasthala-manjunatheshwara%2F&size=63KB&p=manjunatheshwara+temple&oid=10ca440a0ea8f1b5b0b6fe7b949477b5&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&fr=mcafee&tt=Shri+Dharmasthala+Manjunatheshwara+Temple+-+Arippady+Mutt+Lodge&b=0&ni=160&no=4&ts=&tab=organic&sigr=mQWtFHCXXWX7&sigb=t.UukA5Ry0GG&sigi=xH9eqQFbsSgP&sigt=dJj3uLCTqLv.&.crumb=0Y32Y2hyNRV&fr=mcafee&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&type=E210IN885G0" class="slide">
+</div>
+
+<!-- About Mangalore -->
+<section class="section" id="about">
+  <h2>About Mangalore</h2>
+  <p>
+    Mangalore, locally known as Kudla, is a vibrant coastal city nestled between the Arabian Sea and the Western Ghats in Karnataka. 
+    With a rich history dating back over a thousand years, it has served as an important port for trade with Persia and Arabia. 
+    Mangalore’s culture reflects a harmonious blend of Tulunadu traditions, Konkani influences, and colonial heritage.
+    <br><br>
+    The city is dotted with ancient temples, pristine beaches, and bustling markets. Its architecture displays influences from 
+    Portuguese and Vijayanagara eras. Known for its hospitality and scenic beauty, Mangalore attracts travelers who wish to 
+    experience authentic coastal life — from fishing harbors to cultural festivals like Dasara and Kambala. 
+    The local people, fluent in Tulu, Konkani, and Kannada, are known for their warmth and strong community values.
+  </p>
+</section>
+
+<!-- Special Cuisine -->
+<section class="section" id="cuisine">
+  <h2>Special Cuisine of Kudla</h2>
+  <p>
+    Mangalore’s cuisine is a flavorful celebration of the coast. Coconut, curry leaves, tamarind, and freshly caught seafood 
+    dominate the kitchen. Popular dishes include *Neer Dosa, **Chicken Ghee Roast, **Bangude Pulimunchi (Mackerel Curry)*, 
+    and *Kori Rotti* — a spicy chicken curry paired with crispy rice wafers. 
+    <br><br>
+    Vegetarian delights like Pathrode, Sanna, and Bajil Uppit reflect the traditional Tulu and Konkani households. 
+    Sweet lovers can’t miss Mangalore Buns and Payasam. The aroma of filter coffee and the tang of solkadhi 
+    perfectly complete a Kudla meal. For food enthusiasts, every bite in Mangalore tells a story of spice, sea, and tradition.
+  </p>
+</section>
+
+<!-- Popular Hotels -->
+<section class="section" id="hotels">
+  <h2>Popular Hotels in Mangalore</h2>
+  <div class="hotels">
+    <div class="hotel-card">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/d9/11/53/the-ocean-pearl.jpg" alt="The Ocean Pearl">
+      <h3>The Ocean Pearl</h3>
+      <p>Located in the heart of Mangalore, The Ocean Pearl offers luxury comfort, elegant dining, and easy access to city attractions.</p>
+    </div>
+    <div class="hotel-card">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/51/5e/9d/hotel-deepa-comforts.jpg" alt="Hotel Deepa Comforts">
+      <h3>Hotel Deepa Comforts</h3>
+      <p>A popular 4-star hotel with premium amenities and a relaxing stay near major temples and shopping streets.</p>
+    </div>
+    <div class="hotel-card">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/6c/63/37/fortune-inn-valley-view.jpg" alt="Fortune Inn Valley View">
+      <h3>Fortune Inn Valley View</h3>
+      <p>Just 8 km from the airport, this hotel offers lush surroundings, a pool, and authentic coastal cuisine.</p>
+    </div>
+    <div class="hotel-card">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/3d/f1/21/goldfinch-mangalore.jpg" alt="Goldfinch Mangalore">
+      <h3>Goldfinch Hotel</h3>
+      <p>A stylish property offering luxury rooms, rooftop dining, and proximity to major tourist attractions.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Namma Kudla | Designed with ❤ in Mangalore</p>
+</footer>
+
+<script>
+  // Banner slideshow animation
+  let slides = document.querySelectorAll('.slide');
+  let current = 0;
+  function showNextSlide() {
+    slides[current].style.opacity = 0;
+    current = (current + 1) % slides.length;
+    slides[current].style.opacity = 1;
+  }
+  setInterval(showNextSlide, 4000);
+
+  // Scroll fade-in animation
+  const sections = document.querySelectorAll('.section');
+  window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        sec.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
